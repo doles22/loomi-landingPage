@@ -37,26 +37,20 @@ export function ThreadDecoration() {
 
         {/* 
           Path design strategy:
-          0-100: Hero area (starts roughly where the phone thread exits)
-          100-400: How it works (zig zag)
-          400-800: Features
-          800-1000: Footer
+          Smoother, more elegant flow that weaves gently behind the content.
+          Starts from the hero area (right side) and flows down.
         */}
         <motion.path
-          d="M 75 80 
-             C 85 100, 50 120, 20 150 
-             C -10 180, 10 220, 50 250
-             C 90 280, 90 320, 50 350
-             C 20 380, 20 420, 50 450
-             C 80 480, 80 550, 50 600
-             C 20 650, 20 750, 50 800
-             C 80 850, 50 950, 50 1000"
+          d="M 80 0 
+             C 80 100, 20 150, 20 300 
+             C 20 500, 85 600, 85 800 
+             C 85 950, 50 980, 50 1000"
           stroke="url(#thread-gradient-global)"
-          strokeWidth="0.8"
+          strokeWidth="1.5"
           strokeLinecap="round"
           fill="none"
           filter="url(#glow-blur-global)"
-          style={{ pathLength, opacity: 0.7 }}
+          style={{ pathLength, opacity: 0.6 }}
         />
       </svg>
       
