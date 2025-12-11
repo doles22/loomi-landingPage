@@ -39,9 +39,6 @@ export function Navbar() {
         <Link href="/">
           <a className="flex items-center gap-3 group">
             <img src={logo} alt="Loomi Stories" className="h-10 w-auto transition-transform group-hover:scale-105" />
-            <span className="text-xl font-heading font-bold text-foreground tracking-tighter hidden sm:block">
-              Loomi Stories
-            </span>
           </a>
         </Link>
 
