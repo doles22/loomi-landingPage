@@ -45,28 +45,6 @@ export function Hero() {
             </Button>
           </div>
           
-          <div className="mt-10 flex items-center gap-4 text-sm text-muted-foreground">
-            <div className="flex -space-x-3">
-              {[1,2,3,4].map(i => (
-                <div key={i} className="w-10 h-10 rounded-full bg-white border-2 border-background flex items-center justify-center text-[10px] font-bold overflow-hidden shadow-sm">
-                   <img src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${i + 5}&backgroundColor=ffdfbf`} alt="User" />
-                </div>
-              ))}
-              <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-xs font-bold border-2 border-background text-primary">
-                +10k
-              </div>
-            </div>
-            <div className="flex flex-col">
-              <div className="flex text-yellow-400">
-                <Star className="w-4 h-4 fill-current" />
-                <Star className="w-4 h-4 fill-current" />
-                <Star className="w-4 h-4 fill-current" />
-                <Star className="w-4 h-4 fill-current" />
-                <Star className="w-4 h-4 fill-current" />
-              </div>
-              <p className="font-medium text-foreground">Loved by families</p>
-            </div>
-          </div>
         </motion.div>
 
         <motion.div 
