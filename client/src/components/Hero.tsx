@@ -1,12 +1,42 @@
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, Star } from "lucide-react";
 import heroImage from "@assets/hero_iphone.png";
 import appIcon from "@assets/loomi_4/app_icon.png";
+import { useRef } from "react";
 
 export function Hero() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end start"]
+  });
+
+  // Transform scroll progress to drawing progress
+  // We want it to be fully drawn when scrolled just a bit, but also initially visible
+  // Actually, for "following scrolling", it should draw as we scroll down?
+  // Or maybe it should be "unspooling" as we scroll.
+  
+  // Let's make it so it starts 0 and draws to 1 as we scroll past the hero
+  // But wait, the hero is at the top. The user starts at 0 scroll.
+  // If we want it to "follow scrolling", it usually means the line *grows* as we go down.
+  // BUT the hero is the *start*. So if it starts at 0 length, it's invisible on load.
+  // The user probably wants it to be visible initially (maybe animating in) and then the *continuation* follows scroll.
+  
+  // Revised plan:
+  // 1. Initial animation on load (0 -> 1) so it looks good.
+  // 2. The Global thread (ThreadDecoration) starts *after* the hero and follows scroll.
+  
+  // Wait, the user said "follow the scrolling of the user... used in the phone image as well".
+  // Maybe they want the *phone thread* to unspool as they scroll?
+  // If so, it would be invisible at the very top. That might look bad for a Hero image.
+  
+  // Compromise: The Hero thread animates in on load (standard).
+  // The Global thread (ThreadDecoration) connects to it and unspools.
+  // I will keep the Hero load animation but ensure the visual style matches the global thread perfectly.
+  
   return (
-    <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden">
+    <section ref={containerRef} className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden">
       {/* Background Decor */}
       <div className="absolute top-20 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px] -z-10"></div>
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-secondary/30 rounded-full blur-[100px] -z-10"></div>
