@@ -1,0 +1,168 @@
+You are a senior-level product designer & front-end engineer. Please build a highly polished, responsive marketing website for a mobile app called “Loomi Stories.”
+
+Tech stack:
+- Use modern semantic HTML5, clean, readable CSS (or Tailwind CSS if preferred), and minimal vanilla JavaScript or React.
+- The site should be fully responsive and look great on mobile, tablet, and desktop.
+
+Overall concept:
+Loomi Stories is a cozy, modern storytelling app for families. It weaves a family’s imagination into personalized bedtime stories with simple line-art illustrations. The name “Loomi” blends “loom” (threads woven together) and “light” (warmth, spark, glow). The brand should feel warm, minimal, and emotionally connective.
+
+Pages:
+1. Main landing page (Home)
+2. Privacy Policy page
+3. Terms of Use page
+
+Routing:
+- Home: `/`
+- Privacy Policy: `/privacy-policy`
+- Terms of Use: `/terms-of-use`
+
+Global design system:
+- Aesthetic: Soft, minimal, modern, with gentle curves and lots of white space.
+- Visual metaphor: Thin line art, subtle flowing “threads,” and soft glows to represent woven stories and light.
+- Color palette:
+  - Background: Off-white / soft cream
+  - Primary accent: Warm golden light (for buttons and highlights)
+  - Secondary accents: Soft charcoal for text, pale blush or muted teal for subtle highlights
+- Typography:
+  - Headings: Clean, modern sans-serif with slightly rounded feel
+  - Body: Highly legible sans-serif
+  - Use good hierarchy, line-height, and spacing to feel calm and premium.
+- Imagery:
+  - Use simple, single-line or minimal illustrations (abstract shapes, families reading together, a glowing thread weaving across the page).
+  - Avoid noisy stock photos; keep it cohesive and art-driven.
+
+Navigation:
+Sticky top nav with:
+- Logo on the left (simple “Loomi Stories” wordmark)
+- Links on the right: “How it works”, “Features”, “For Families”, “Download the App”, “Privacy”, “Terms”
+
+Include a consistent footer with:
+- Small logo or wordmark
+- Links: Home, Download, Privacy Policy, Terms of Use
+- Copyright line: “© [CURRENT YEAR] Loomi Stories. All rights reserved.”
+
+========================
+HOME / LANDING PAGE CONTENT
+========================
+
+Goal:
+Make the first fold clearly communicate:
+- What Loomi Stories is
+- Emotional benefit to families
+- A clear call-to-action to download the app
+
+Hero section (above the fold):
+- Headline example:
+  “Weave bedtime stories that bring your family closer.”
+- Subheading example:
+  “Loomi Stories turns your child’s ideas and your family moments into beautifully illustrated bedtime stories you can read and listen to together.”
+- Primary CTA button:
+  - Text: “Download on the App Store”
+  - Link: https://apps.apple.com/ca/app/loomi-stories/id6754125616
+- Secondary CTA (text link or ghost button):
+  - “Learn how Loomi works”
+- Visual:
+  - On the right side (or below on mobile), show a mockup of a phone displaying a Loomi story screen with line-art illustration.
+  - Add a subtle flowing line or “thread of light” moving through the hero section.
+
+Section: “What is Loomi Stories?”
+- Short paragraph explaining:
+  - Loomi weaves your family’s imagination into personalized bedtime stories.
+  - Children become the heroes.
+  - Stories are simple, warm, and illustrated in a calming line-art style.
+- Use 2–3 supporting bullet points about connection, creativity, and memories.
+
+Section: “How it works” (3-step layout)
+Use a three-column or stacked vertical layout:
+1. “Add your family”  
+   - “Create characters based on your kids, family members, and even pets.”
+2. “Spark a story”  
+   - “Start with a simple idea, memory, or bedtime prompt.”
+3. “Enjoy together”  
+   - “Loomi weaves it into a cozy story with matching illustrations you can read or listen to at bedtime.”
+
+Include simple line icons or illustrations for each step.
+
+Section: “Why families love Loomi”
+- 3–4 cards that highlight:
+  - “Stories about your child”: They see themselves as the hero.
+  - “Moments that matter”: Turn everyday memories into stories.
+  - “Calm, cozy bedtime”: Gentle narration and simple line art.
+  - “A library you’ll cherish”: Save and revisit your favorite stories.
+
+Optional: add a short testimonial-style section with fake placeholder quotes that I can replace:
+- Example: “My son asks for his Loomi story every night now. It’s become our favorite bedtime ritual.”
+
+Section: “Designed to feel calm and simple”
+- Talk about the art direction:
+  - Line-art illustrations inspired by a single thread
+  - Minimal, distraction-free reading experience
+  - Built for parents who want meaningful screen time, not noise
+
+Section: “Get Loomi Stories”
+- Strong call-to-action block:
+  - Headline: “Ready to start your next story?”
+  - Short text: “Join families weaving magical, meaningful bedtime stories with Loomi.”
+  - Prominent App Store button:
+    - “Download on the App Store”
+    - Link: https://apps.apple.com/ca/app/loomi-stories/id6754125616
+- Optionally include small text: “Available on iOS. Android coming soon.” (use placeholder if needed)
+
+Make the Home page feel like a premium product marketing page for a family-focused app, with clean sections, smooth scrolling, subtle hover states, and simple animations (like fade-ins or sliding in content).
+
+========================
+PRIVACY POLICY PAGE
+========================
+
+Route: `/privacy-policy`
+
+Create a clean, readable layout with:
+- Page title: “Privacy Policy”
+- Subheader: “Your family’s privacy and safety matter to us.”
+- Use placeholder legal-style sections with headings such as:
+  - Information We Collect
+  - How We Use Your Information
+  - How We Store and Protect Data
+  - Children’s Privacy
+  - Your Rights and Choices
+  - Contact Us
+
+Use simple placeholder text I can replace later. Focus on good typography, spacing, and readability (larger line height, soft text color, left-aligned text).
+
+Include a “Back to Home” link and “Download the App” button somewhere near the top or bottom.
+
+========================
+TERMS OF USE PAGE
+========================
+
+Route: `/terms-of-use`
+
+Create a clean, readable layout with:
+- Page title: “Terms of Use”
+- Subheader: “Please read these terms carefully before using Loomi Stories.”
+- Placeholder sections:
+  - Acceptance of Terms
+  - Use of the Service
+  - Subscription and Payments
+  - Content and Ownership
+  - Limitations of Liability
+  - Termination
+  - Changes to These Terms
+  - Contact Information
+
+Again, focus on clean typography and structure, with placeholder text that I will replace with my own legal terms.
+
+Include a “Back to Home” link and “Download the App” button.
+
+========================
+GENERAL REQUIREMENTS
+========================
+
+- Fully responsive, mobile-first design.
+- Smooth scroll for anchor links (e.g., “How it works” from nav).
+- Consistent spacing, padding, and component style across all pages.
+- Accessible color contrast and ARIA labels where appropriate.
+- Clean, well-commented code so I can easily edit text and links later.
+
+Please output the complete code for the site (HTML/CSS/JS or React/Tailwind) so I can copy it into Replit and run it as a multi-page site or a single-page app with routing.
