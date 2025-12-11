@@ -20,9 +20,7 @@ export function Footer() {
             <Link href="/privacy-policy">
               <a className="hover:text-primary transition-colors">Privacy Policy</a>
             </Link>
-            <Link href="/terms-of-use">
-              <a className="hover:text-primary transition-colors">Terms of Use</a>
-            </Link>
+            <a href="https://www.apple.com/legal/internet-services/terms/site.html" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Terms of Use</a>
           </div>
 
           <div className="text-sm text-muted-foreground/60">

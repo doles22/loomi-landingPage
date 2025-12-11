@@ -79,9 +79,7 @@ export function Navbar() {
           <Link href="/privacy-policy">
             <a className="py-2 font-medium">Privacy</a>
           </Link>
-          <Link href="/terms-of-use">
-            <a className="py-2 font-medium">Terms</a>
-          </Link>
+          <a href="https://www.apple.com/legal/internet-services/terms/site.html" target="_blank" rel="noopener noreferrer" className="py-2 font-medium">Terms</a>
           <Button className="w-full rounded-full bg-primary text-white">
             Download App
           </Button>
