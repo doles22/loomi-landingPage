@@ -1,0 +1,92 @@
+Privacy Policy
+Last Updated: November 5, 2025
+
+Loomi Stories is developed and operated by Good Morning Product Manager LLC ("we," "us," or "our"). We care deeply about your privacy and are committed to being clear and transparent about how we handle your information.
+
+If you have any questions, please contact us at: loomi@morningpm.com
+
+1. Information We Collect
+We collect only the information necessary to help you create, save, and enjoy family stories and artwork.
+
+Account Information
+When you sign up or log in, we may collect:
+
+Email address (for Email + Password login)
+Apple ID information (when using "Sign in with Apple")
+Google account information (when using "Sign in with Google")
+We do not receive or store your password. Authentication is handled securely by Firebase Authentication.
+
+Story & Image Content
+When you create stories or artwork in Loomi Stories:
+
+Your content is stored securely in our databases (Replit database + Firebase services)
+This allows your creations to sync across your devices
+App Usage & Performance Data
+We collect anonymous app usage data to improve Loomi Stories. This includes:
+
+Which features are used
+App performance and crash reports
+This is processed through:
+
+Firebase Analytics
+Firebase Crashlytics
+Subscription Information
+If you subscribe, basic purchase and account status details are processed through:
+
+RevenueCat
+We do not store or have access to your full payment details.
+
+2. How We Use Your Information
+We use your information to:
+
+Create and maintain your account
+Save and display your stories and artwork
+Improve app performance and reliability
+Manage subscriptions and billing
+Provide customer support
+We do not:
+
+Sell your personal information
+Share your data with advertisers
+Track you across other apps or websites
+3. Who We Share Information With
+We only share information with service providers who help us run Loomi Stories:
+
+Service	Purpose	Privacy Policy
+Firebase (Google)	Authentication, analytics, crash reporting	View Policy
+RevenueCat	Subscription validation & billing	View Policy
+Replit	Database storage	View Policy
+OpenAI (ChatGPT API)	AI text/image generation	View Policy
+These providers must use your information only to support Loomi Stories and are required to protect it.
+
+4. Data Security
+We use standard security practices, such as:
+
+Encrypted data transmission (HTTPS/TLS)
+Restricted access to stored data
+Secure authentication services
+While no system can be 100% secure, we continually work to enhance protection.
+
+5. Your Rights & Controls
+You can:
+
+Access your account and content at any time
+Update your information
+Request deletion of your account and all associated data
+To request deletion, please email: loomi@morningpm.com with the subject line: Delete My Loomi Stories Account
+
+We will permanently remove your data within a reasonable timeframe.
+
+6. Children's Privacy
+Loomi Stories is family-focused, but:
+
+The app is not intended for children under 13 without parent or guardian supervision
+Parents/guardians are responsible for account creation and oversight
+We do not knowingly collect personal information directly from children without parental consent
+7. Changes to This Policy
+We may update this Privacy Policy from time to time. If we make significant changes, we will notify users in-app or by email.
+
+8. Contact Us
+Good Morning Product Manager LLC
+
+Email: loomi@morningpm.com
