@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import logo from "@assets/loomi_4/logo.png";
 
 export function Footer() {
   return (
@@ -6,8 +7,7 @@ export function Footer() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex items-center gap-2">
-            <span className="text-primary text-xl">✦</span>
-            <span className="font-heading font-bold text-lg">Loomi Stories</span>
+            <img src={logo} alt="Loomi Stories" className="h-8 w-auto opacity-80 hover:opacity-100 transition-opacity" />
           </div>
 
           <div className="flex flex-wrap gap-6 text-sm text-muted-foreground">
