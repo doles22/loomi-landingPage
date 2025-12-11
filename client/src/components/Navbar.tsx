@@ -1,7 +1,8 @@
 import { Link, useLocation } from "wouter";
-import { Menu, X, Download } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
+import logo from "@assets/loomi_4/logo.png";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,13 +32,16 @@ export function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-white/80 backdrop-blur-md shadow-sm py-4" : "bg-transparent py-6"
+        scrolled ? "bg-white/90 backdrop-blur-md shadow-sm py-3" : "bg-transparent py-5"
       }`}
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <Link href="/">
-          <a className="text-2xl font-heading font-bold text-foreground tracking-tighter flex items-center gap-2">
-            <span className="text-primary text-3xl">✦</span> Loomi Stories
+          <a className="flex items-center gap-3 group">
+            <img src={logo} alt="Loomi Stories" className="h-10 w-auto transition-transform group-hover:scale-105" />
+            <span className="text-xl font-heading font-bold text-foreground tracking-tighter hidden sm:block">
+              Loomi Stories
+            </span>
           </a>
         </Link>
 
@@ -58,7 +62,7 @@ export function Navbar() {
         </div>
 
         {/* Mobile Toggle */}
-        <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
+        <button className="md:hidden p-2 text-foreground" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <X /> : <Menu />}
         </button>
       </div>
