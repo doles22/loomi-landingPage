@@ -1,13 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowRight, Star } from "lucide-react";
-import heroImage from "@assets/generated_images/hero_mockup_of_loomi_app_on_iphone_with_glowing_thread.png";
+import heroImage from "@assets/hero_iphone.png";
 import appIcon from "@assets/loomi_4/app_icon.png";
 
 export function Hero() {
   return (
     <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden">
-      {/* Background Decor - now handled by ThreadDecoration but we keep subtle blobs */}
+      {/* Background Decor */}
       <div className="absolute top-20 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px] -z-10"></div>
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-secondary/30 rounded-full blur-[100px] -z-10"></div>
       
@@ -76,19 +76,55 @@ export function Hero() {
           className="relative hidden md:block"
         >
           <div className="relative z-10 w-full max-w-md mx-auto">
+            {/* Soft Glow Behind */}
             <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full transform translate-y-10 scale-90"></div>
-            {/* Using the generated hero image as it's a good 3D render */}
+            
+            {/* Weaving Light Decoration */}
+            <svg className="absolute -inset-20 w-[140%] h-[140%] z-20 pointer-events-none opacity-80" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <motion.path 
+                d="M50,350 C100,350 50,150 200,150 C350,150 300,50 350,50" 
+                stroke="url(#hero-thread-gradient)" 
+                strokeWidth="2" 
+                fill="none"
+                initial={{ pathLength: 0, opacity: 0 }}
+                animate={{ pathLength: 1, opacity: 1 }}
+                transition={{ duration: 2, ease: "easeInOut", delay: 0.5 }}
+              />
+              <motion.path 
+                d="M50,350 C100,350 50,150 200,150 C350,150 300,50 350,50" 
+                stroke="url(#hero-thread-glow)" 
+                strokeWidth="8" 
+                fill="none"
+                style={{ filter: "blur(8px)" }}
+                initial={{ pathLength: 0, opacity: 0 }}
+                animate={{ pathLength: 1, opacity: 0.5 }}
+                transition={{ duration: 2, ease: "easeInOut", delay: 0.5 }}
+              />
+              <defs>
+                <linearGradient id="hero-thread-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="transparent" />
+                  <stop offset="20%" stopColor="#EAB308" />
+                  <stop offset="80%" stopColor="#F59E0B" />
+                  <stop offset="100%" stopColor="transparent" />
+                </linearGradient>
+                <linearGradient id="hero-thread-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+                   <stop offset="0%" stopColor="#EAB308" />
+                   <stop offset="100%" stopColor="#F59E0B" />
+                </linearGradient>
+              </defs>
+            </svg>
+
             <img 
               src={heroImage} 
               alt="Loomi Stories App Interface" 
-              className="relative w-full drop-shadow-2xl rounded-[3rem] border-8 border-white/30"
+              className="relative w-full drop-shadow-2xl z-10"
             />
             
             {/* Floating app icon badge */}
             <motion.div 
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -bottom-6 -left-6 bg-white p-4 rounded-3xl shadow-xl flex items-center gap-3 max-w-[200px]"
+              className="absolute bottom-20 -left-6 bg-white p-4 rounded-3xl shadow-xl flex items-center gap-3 max-w-[200px] z-30"
             >
               <div className="bg-secondary/50 p-2 rounded-2xl">
                 <img src={appIcon} className="w-8 h-8 rounded-lg" alt="" />
