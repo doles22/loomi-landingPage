@@ -75,43 +75,49 @@ export function Hero() {
           transition={{ duration: 1, delay: 0.2 }}
           className="relative hidden md:block"
         >
-          <div className="relative z-10 w-full max-w-md mx-auto">
+          <div className="relative z-10 w-full max-w-md mx-auto perspective-1000">
             {/* Soft Glow Behind */}
             <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full transform translate-y-10 scale-90"></div>
             
-            {/* Weaving Light Decoration */}
-            <svg className="absolute -inset-20 w-[140%] h-[140%] z-20 pointer-events-none opacity-80" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <motion.path 
-                d="M50,350 C100,350 50,150 200,150 C350,150 300,50 350,50" 
-                stroke="url(#hero-thread-gradient)" 
-                strokeWidth="2" 
-                fill="none"
-                initial={{ pathLength: 0, opacity: 0 }}
-                animate={{ pathLength: 1, opacity: 1 }}
-                transition={{ duration: 2, ease: "easeInOut", delay: 0.5 }}
-              />
-              <motion.path 
-                d="M50,350 C100,350 50,150 200,150 C350,150 300,50 350,50" 
-                stroke="url(#hero-thread-glow)" 
-                strokeWidth="8" 
-                fill="none"
-                style={{ filter: "blur(8px)" }}
-                initial={{ pathLength: 0, opacity: 0 }}
-                animate={{ pathLength: 1, opacity: 0.5 }}
-                transition={{ duration: 2, ease: "easeInOut", delay: 0.5 }}
-              />
+            {/* BACK THREAD (Behind Phone) */}
+            <svg className="absolute -inset-[25%] w-[150%] h-[150%] z-0 pointer-events-none opacity-80" viewBox="0 0 400 600" fill="none" xmlns="http://www.w3.org/2000/svg">
               <defs>
-                <linearGradient id="hero-thread-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stopColor="transparent" />
-                  <stop offset="20%" stopColor="#EAB308" />
-                  <stop offset="80%" stopColor="#F59E0B" />
-                  <stop offset="100%" stopColor="transparent" />
-                </linearGradient>
-                <linearGradient id="hero-thread-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+                 <linearGradient id="thread-glow" x1="0%" y1="0%" x2="100%" y2="0%">
                    <stop offset="0%" stopColor="#EAB308" />
-                   <stop offset="100%" stopColor="#F59E0B" />
-                </linearGradient>
+                   <stop offset="50%" stopColor="#FDE047" />
+                   <stop offset="100%" stopColor="#EAB308" />
+                 </linearGradient>
+                 <filter id="glow-blur" x="-50%" y="-50%" width="200%" height="200%">
+                   <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+                   <feMerge>
+                     <feMergeNode in="coloredBlur"/>
+                     <feMergeNode in="SourceGraphic"/>
+                   </feMerge>
+                 </filter>
               </defs>
+              
+              {/* Bottom Loop Behind */}
+              <motion.path 
+                d="M50,550 C150,550 350,450 350,400" 
+                stroke="url(#thread-glow)" 
+                strokeWidth="2"
+                strokeLinecap="round"
+                fill="none"
+                initial={{ pathLength: 0, opacity: 0 }}
+                animate={{ pathLength: 1, opacity: 0.6 }}
+                transition={{ duration: 1.5, ease: "easeInOut" }}
+              />
+              {/* Top Loop Behind */}
+              <motion.path 
+                d="M50,300 C150,250 350,200 350,150" 
+                stroke="url(#thread-glow)" 
+                strokeWidth="2" 
+                strokeLinecap="round"
+                fill="none"
+                initial={{ pathLength: 0, opacity: 0 }}
+                animate={{ pathLength: 1, opacity: 0.6 }}
+                transition={{ duration: 1.5, ease: "easeInOut", delay: 0.5 }}
+              />
             </svg>
 
             <img 
@@ -119,6 +125,44 @@ export function Hero() {
               alt="Loomi Stories App Interface" 
               className="relative w-full drop-shadow-2xl z-10"
             />
+            
+            {/* FRONT THREAD (In Front of Phone) */}
+            <svg className="absolute -inset-[25%] w-[150%] h-[150%] z-20 pointer-events-none" viewBox="0 0 400 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+              {/* Middle Cross Over */}
+              <motion.path 
+                d="M350,400 C350,350 150,350 50,300" 
+                stroke="url(#thread-glow)" 
+                strokeWidth="3" 
+                strokeLinecap="round"
+                fill="none"
+                filter="url(#glow-blur)"
+                initial={{ pathLength: 0, opacity: 0 }}
+                animate={{ pathLength: 1, opacity: 1 }}
+                transition={{ duration: 1.5, ease: "easeInOut", delay: 0.25 }}
+              />
+              {/* Top Exit */}
+              <motion.path 
+                d="M350,150 C350,100 200,50 150,20" 
+                stroke="url(#thread-glow)" 
+                strokeWidth="3" 
+                strokeLinecap="round"
+                fill="none"
+                filter="url(#glow-blur)"
+                initial={{ pathLength: 0, opacity: 0 }}
+                animate={{ pathLength: 1, opacity: 1 }}
+                transition={{ duration: 1.5, ease: "easeInOut", delay: 0.75 }}
+              />
+              
+              {/* Sparkles on the thread */}
+              <motion.circle cx="350" cy="400" r="3" fill="#FFF" filter="url(#glow-blur)" 
+                animate={{ scale: [1, 1.5, 1], opacity: [0.5, 1, 0.5] }} 
+                transition={{ duration: 2, repeat: Infinity }} 
+              />
+              <motion.circle cx="50" cy="300" r="2" fill="#FFF" filter="url(#glow-blur)" 
+                animate={{ scale: [1, 1.5, 1], opacity: [0.5, 1, 0.5] }} 
+                transition={{ duration: 3, repeat: Infinity, delay: 1 }} 
+              />
+            </svg>
             
             {/* Floating app icon badge */}
             <motion.div 
