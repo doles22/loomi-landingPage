@@ -53,9 +53,11 @@ export function Navbar() {
           <button onClick={() => scrollToSection("families")} className="text-sm font-medium hover:text-primary transition-colors">
             For Families
           </button>
-          <Button className="rounded-full px-6 bg-primary hover:bg-primary/90 text-white font-medium shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5">
-            Download App
-          </Button>
+          <a href="https://apps.apple.com/ca/app/loomi-stories/id6754125616" target="_blank" rel="noopener noreferrer">
+            <Button className="rounded-full px-6 bg-primary hover:bg-primary/90 text-white font-medium shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5">
+              Download App
+            </Button>
+          </a>
         </div>
 
         {/* Mobile Toggle */}
@@ -80,9 +82,11 @@ export function Navbar() {
             <a className="py-2 font-medium">Privacy</a>
           </Link>
           <a href="https://www.apple.com/legal/internet-services/terms/site.html" target="_blank" rel="noopener noreferrer" className="py-2 font-medium">Terms</a>
-          <Button className="w-full rounded-full bg-primary text-white">
-            Download App
-          </Button>
+          <a href="https://apps.apple.com/ca/app/loomi-stories/id6754125616" target="_blank" rel="noopener noreferrer" className="w-full">
+            <Button className="w-full rounded-full bg-primary text-white">
+              Download App
+            </Button>
+          </a>
         </div>
       )}
     </nav>

@@ -151,7 +151,9 @@ export default function Privacy() {
         </div>
         
         <div className="mt-16 pt-8 border-t border-border">
-          <Button className="rounded-full bg-primary text-white">Download the App</Button>
+          <a href="https://apps.apple.com/ca/app/loomi-stories/id6754125616" target="_blank" rel="noopener noreferrer">
+            <Button className="rounded-full bg-primary text-white">Download the App</Button>
+          </a>
         </div>
       </div>
     </Layout>
