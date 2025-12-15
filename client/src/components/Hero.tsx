@@ -42,9 +42,6 @@ export function Hero() {
                 Download on App Store
               </Button>
             </a>
-            <Button variant="ghost" size="lg" className="h-14 px-8 rounded-full hover:bg-white/50 text-foreground font-medium group">
-              How it works <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Button>
           </div>
           
         </motion.div>
