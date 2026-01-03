@@ -37,7 +37,19 @@ export function Hero() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4">
-            <a href="https://apps.apple.com/ca/app/loomi-stories/id6754125616" target="_blank" rel="noopener noreferrer">
+            <a 
+              href="https://apps.apple.com/ca/app/loomi-stories/id6754125616" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              onClick={() => {
+                if ((window as any).gtag) {
+                  (window as any).gtag('event', 'click_download', {
+                    event_category: 'engagement',
+                    event_label: 'hero_section'
+                  });
+                }
+              }}
+            >
               <Button size="lg" className="h-14 px-8 rounded-full bg-primary hover:bg-primary/90 text-white text-lg shadow-xl shadow-primary/20 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
                 Download on App Store
               </Button>

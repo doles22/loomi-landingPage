@@ -27,6 +27,14 @@ export function Banner() {
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center underline decoration-white/50 hover:decoration-white underline-offset-4 hover:opacity-90 transition-all whitespace-nowrap"
+          onClick={() => {
+            if ((window as any).gtag) {
+              (window as any).gtag('event', 'click_download', {
+                event_category: 'engagement',
+                event_label: 'banner_offer'
+              });
+            }
+          }}
         >
           Redeem Offer <ArrowRight className="ml-1 w-4 h-4" />
         </a>
