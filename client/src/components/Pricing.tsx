@@ -34,7 +34,7 @@ const plans = [
 ];
 
 export function Pricing() {
-  const [billingCycle, setBillingCycle] = useState<"monthly" | "yearly">("yearly");
+  const [billingCycle, setBillingCycle] = useState<"monthly" | "yearly">("monthly");
 
   return (
     <section id="pricing" className="py-24 bg-secondary/30 relative overflow-hidden">
@@ -49,7 +49,7 @@ export function Pricing() {
           </p>
           <div className="bg-white/50 backdrop-blur-sm inline-block rounded-2xl p-6 border border-white/50 mb-8 max-w-lg mx-auto">
             <p className="text-base font-medium text-foreground leading-relaxed">
-              ✨ No cards and no speakers needed. No additional purchases. <br/>
+              ✨ No cards and no speakers needed. <br/>
               Just download and start weaving stories right from your phone or tablet.
             </p>
           </div>
@@ -73,7 +73,7 @@ export function Pricing() {
                   : "text-muted-foreground hover:text-foreground"
               }`}
             >
-              Yearly <span className="ml-1 text-[10px] bg-white/20 px-1.5 py-0.5 rounded-full">Save ~35%</span>
+              Yearly <span className="ml-1 text-[10px] bg-emerald-100 text-emerald-800 px-1.5 py-0.5 rounded-full font-bold">Save ~35%</span>
             </button>
           </div>
         </div>
