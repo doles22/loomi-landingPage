@@ -14,7 +14,7 @@ export function CTASection() {
               Ready to start your next story?
             </h2>
             <p className="text-xl text-white/70 mb-10 leading-relaxed">
-              Join thousands of families weaving magical, meaningful bedtime stories with Loomi.
+              Join our other founding families weaving magical, meaningful bedtime stories with Loomi.
             </p>
             
             <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
