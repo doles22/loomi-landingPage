@@ -3,6 +3,7 @@ import { Hero } from "@/components/Hero";
 import { HowItWorks } from "@/components/HowItWorks";
 import { Features } from "@/components/Features";
 import { About } from "@/components/About";
+import { Pricing } from "@/components/Pricing";
 import { CTASection } from "@/components/CTASection";
 import { ThreadDecoration } from "@/components/ThreadDecoration";
 
@@ -37,6 +38,7 @@ export default function Home() {
         </section>
         <HowItWorks />
         <About />
+        <Pricing />
         <CTASection />
       </div>
     </Layout>

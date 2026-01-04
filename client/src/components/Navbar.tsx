@@ -56,6 +56,9 @@ export function Navbar() {
             <button onClick={() => scrollToSection("about")} className="text-sm font-medium hover:text-primary transition-colors">
               About
             </button>
+            <button onClick={() => scrollToSection("pricing")} className="text-sm font-medium hover:text-primary transition-colors">
+              Pricing
+            </button>
             <a 
               href="https://apps.apple.com/ca/app/loomi-stories/id6754125616" 
               target="_blank" 
@@ -92,6 +95,9 @@ export function Navbar() {
             </button>
             <button onClick={() => scrollToSection("about")} className="text-left py-2 font-medium">
               About
+            </button>
+            <button onClick={() => scrollToSection("pricing")} className="text-left py-2 font-medium">
+              Pricing
             </button>
             <Link href="/privacy-policy">
               <a className="py-2 font-medium">Privacy</a>
