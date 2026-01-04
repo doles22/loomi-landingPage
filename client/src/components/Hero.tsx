@@ -20,7 +20,7 @@ export function Hero() {
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-primary/20 text-foreground text-sm font-semibold shadow-sm mb-8 animate-in slide-in-from-left-4 fade-in duration-700">
             <img src={appIcon} alt="Loomi" className="w-5 h-5 rounded-md" />
-            <span>From Grand Rapids, Michigan</span>
+            <span>Created for our families to share</span>
           </div>
           
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold leading-[1.1] mb-6 text-foreground">
