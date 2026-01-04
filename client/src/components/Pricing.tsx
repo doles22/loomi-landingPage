@@ -47,9 +47,10 @@ export function Pricing() {
           <p className="text-lg text-muted-foreground mb-4">
             Choose the plan that fits your family best.
           </p>
-          <div className="bg-white/50 backdrop-blur-sm inline-block rounded-2xl p-4 border border-white/50 mb-8 max-w-sm">
-            <p className="text-sm font-medium text-foreground">
-              ✨ No hardware needed. No hidden fees. <br/>Just download and start weaving stories.
+          <div className="bg-white/50 backdrop-blur-sm inline-block rounded-2xl p-6 border border-white/50 mb-8 max-w-lg mx-auto">
+            <p className="text-base font-medium text-foreground leading-relaxed">
+              ✨ No cards and no speakers needed. No additional purchases. <br/>
+              Just download and start weaving stories right from your phone or tablet.
             </p>
           </div>
 
