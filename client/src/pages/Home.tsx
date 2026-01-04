@@ -2,6 +2,7 @@ import { Layout } from "@/components/Layout";
 import { Hero } from "@/components/Hero";
 import { HowItWorks } from "@/components/HowItWorks";
 import { Features } from "@/components/Features";
+import { About } from "@/components/About";
 import { CTASection } from "@/components/CTASection";
 import { ThreadDecoration } from "@/components/ThreadDecoration";
 
@@ -11,7 +12,6 @@ export default function Home() {
       <div className="relative">
         <ThreadDecoration />
         <Hero />
-        <HowItWorks />
         <Features />
         <section className="py-24 bg-secondary/30 relative z-10">
           <div className="container mx-auto px-4 text-center">
@@ -35,6 +35,8 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <HowItWorks />
+        <About />
         <CTASection />
       </div>
     </Layout>

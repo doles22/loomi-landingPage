@@ -47,14 +47,14 @@ export function Navbar() {
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
+            <button onClick={() => scrollToSection("features")} className="text-sm font-medium hover:text-primary transition-colors">
+              For Families
+            </button>
             <button onClick={() => scrollToSection("how-it-works")} className="text-sm font-medium hover:text-primary transition-colors">
               How it works
             </button>
-            <button onClick={() => scrollToSection("features")} className="text-sm font-medium hover:text-primary transition-colors">
-              Features
-            </button>
-            <button onClick={() => scrollToSection("features")} className="text-sm font-medium hover:text-primary transition-colors">
-              For Families
+            <button onClick={() => scrollToSection("about")} className="text-sm font-medium hover:text-primary transition-colors">
+              About
             </button>
             <a 
               href="https://apps.apple.com/ca/app/loomi-stories/id6754125616" 
@@ -84,14 +84,14 @@ export function Navbar() {
         {/* Mobile Nav */}
         {isOpen && (
           <div className="absolute top-full left-0 right-0 bg-white border-b border-border p-4 flex flex-col gap-4 md:hidden shadow-xl animate-in slide-in-from-top-5">
+            <button onClick={() => scrollToSection("features")} className="text-left py-2 font-medium">
+              For Families
+            </button>
             <button onClick={() => scrollToSection("how-it-works")} className="text-left py-2 font-medium">
               How it works
             </button>
-            <button onClick={() => scrollToSection("features")} className="text-left py-2 font-medium">
-              Features
-            </button>
-            <button onClick={() => scrollToSection("features")} className="text-left py-2 font-medium">
-              For Families
+            <button onClick={() => scrollToSection("about")} className="text-left py-2 font-medium">
+              About
             </button>
             <Link href="/privacy-policy">
               <a className="py-2 font-medium">Privacy</a>
