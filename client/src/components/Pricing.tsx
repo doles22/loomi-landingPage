@@ -10,6 +10,8 @@ const plans = [
     description: "Perfect for starting your family's storytelling journey.",
     features: [
       "Unlimited story creation & Characters",
+      "Line Art Illustrations",
+      "Conversation Starters",
       "Standard Authors & Narrators",
       "Short Stories"
     ],
@@ -21,6 +23,8 @@ const plans = [
     description: "For families who want even more magic and control.",
     features: [
       "Everything in Standard",
+      "Line Art Illustrations",
+      "Conversation Starters",
       "Premium Authors & Narrators",
       "Longer stories",
       "Narration playback speed control"
@@ -40,9 +44,14 @@ export function Pricing() {
           <h2 className="text-3xl md:text-5xl font-heading font-bold mb-6 text-foreground">
             Fun for the whole family
           </h2>
-          <p className="text-lg text-muted-foreground mb-8">
+          <p className="text-lg text-muted-foreground mb-4">
             Choose the plan that fits your family best.
           </p>
+          <div className="bg-white/50 backdrop-blur-sm inline-block rounded-2xl p-4 border border-white/50 mb-8 max-w-sm">
+            <p className="text-sm font-medium text-foreground">
+              ✨ No hardware needed. No hidden fees. <br/>Just download and start weaving stories.
+            </p>
+          </div>
 
           <div className="inline-flex items-center p-1 bg-white rounded-full border border-border/50 shadow-sm">
             <button
