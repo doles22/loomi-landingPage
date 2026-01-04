@@ -132,7 +132,7 @@ export function Pricing() {
                 </Button>
               </a>
               <p className="text-center text-xs text-muted-foreground mt-4">
-                7-day free trial included
+                3-day free trial included
               </p>
             </motion.div>
           ))}
