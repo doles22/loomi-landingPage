@@ -21,10 +21,10 @@ export function About() {
           <div className="grid md:grid-cols-2 gap-12 items-start">
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
               <p>
-                Loomi began on a quiet night at home. About two years ago, my wife Taylor and I were having an at-home date night, talking about life, our kids, and all the wild things we were starting to see technology do. We talked about how powerful AI was becoming, but also how distant and impersonal so much of it felt.
+                Loomi began on a quiet night at home. About two years ago, my wife and I were having an at-home date night, talking about life, our kids, and all the wild things we were starting to see technology do. We talked about how powerful AI was becoming, but also how distant and impersonal so much of it felt.
               </p>
               <p>
-                Then Taylor had a simple, wonderful idea. <span className="text-foreground font-medium">What if we used this technology to write stories for our kids?</span>
+                Then she had a simple, wonderful idea. <span className="text-foreground font-medium">What if we used this technology to write stories for our kids?</span>
               </p>
               <p>
                 Stories where they were the heroes. Stories that felt personal. Stories that could become part of our nightly routine.
@@ -45,7 +45,7 @@ export function About() {
                 Friends and family became our first testers. They gave feedback, shared ideas, and helped bring features to life, turning Loomi from a rough idea into a real experience families could use and love.
               </p>
               <p>
-                We live in East Grand Rapids, Michigan, and Loomi is deeply rooted in the life we’ve built here. Slow evenings, close knit community, and the belief that the smallest moments often matter the most.
+                We live in Grand Rapids, Michigan, and Loomi is deeply rooted in the life we’ve built here. Slow evenings, close knit community, and the belief that the smallest moments often matter the most.
               </p>
               <div className="bg-secondary/20 p-8 rounded-2xl border border-secondary/50 my-8">
                 <p className="italic text-foreground font-medium">
