@@ -6,10 +6,29 @@ import { Input } from "@/components/ui/input";
 export function CTASection() {
   const [email, setEmail] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (email) {
+    if (!email) return;
+    
+    setIsLoading(true);
+    setError("");
+    
+    try {
+      const response = await fetch('/api/android-waitlist', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
+      
+      if (!response.ok) {
+        throw new Error('Failed to submit');
+      }
+      
       setIsSubmitted(true);
       if ((window as any).gtag) {
         (window as any).gtag('event', 'android_waitlist_signup', {
@@ -17,6 +36,10 @@ export function CTASection() {
           event_label: 'cta_section'
         });
       }
+    } catch (err) {
+      setError("Something went wrong. Please try again.");
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -71,19 +94,32 @@ export function CTASection() {
                   </div>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-2">
-                  <Input 
-                    type="email" 
-                    placeholder="Enter your email" 
-                    className="bg-white/10 border-white/20 text-white placeholder:text-white/50 h-12 rounded-xl focus-visible:ring-primary focus-visible:border-primary"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                  />
-                  <Button type="submit" variant="secondary" className="h-12 px-6 rounded-xl font-bold whitespace-nowrap">
-                    Notify Me
-                  </Button>
-                </form>
+                <>
+                  <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-2">
+                    <Input 
+                      type="email" 
+                      placeholder="Enter your email" 
+                      className="bg-white/10 border-white/20 text-white placeholder:text-white/50 h-12 rounded-xl focus-visible:ring-primary focus-visible:border-primary"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
+                      disabled={isLoading}
+                      data-testid="input-android-waitlist-email"
+                    />
+                    <Button 
+                      type="submit" 
+                      variant="secondary" 
+                      className="h-12 px-6 rounded-xl font-bold whitespace-nowrap"
+                      disabled={isLoading}
+                      data-testid="button-android-waitlist-submit"
+                    >
+                      {isLoading ? "Submitting..." : "Notify Me"}
+                    </Button>
+                  </form>
+                  {error && (
+                    <p className="text-red-400 text-sm mt-2">{error}</p>
+                  )}
+                </>
               )}
             </div>
           </div>
