@@ -1,7 +1,25 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
+import { useState } from "react";
+import { Input } from "@/components/ui/input";
 
 export function CTASection() {
+  const [email, setEmail] = useState("");
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (email) {
+      setIsSubmitted(true);
+      if ((window as any).gtag) {
+        (window as any).gtag('event', 'android_waitlist_signup', {
+          event_category: 'engagement',
+          event_label: 'cta_section'
+        });
+      }
+    }
+  };
+
   return (
     <section className="py-24 bg-white">
       <div className="container mx-auto px-4 md:px-6">
@@ -37,9 +55,35 @@ export function CTASection() {
               </a>
             </div>
             
-            <p className="mt-8 text-sm text-white/40">
-              Available on iOS. Android coming soon.
-            </p>
+            <div className="mt-12 pt-8 border-t border-white/10 max-w-md mx-auto">
+              <p className="text-white/60 mb-4 font-medium">Using Android?</p>
+              
+              {isSubmitted ? (
+                <div className="bg-white/10 rounded-xl p-4 flex items-center justify-center gap-3 text-white animate-in fade-in zoom-in duration-300">
+                  <div className="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center">
+                    <Check className="w-5 h-5 text-white" />
+                  </div>
+                  <div className="text-left">
+                    <p className="font-bold">You're on the list!</p>
+                    <p className="text-sm text-white/70">We'll let you know when we launch.</p>
+                  </div>
+                </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-2">
+                  <Input 
+                    type="email" 
+                    placeholder="Enter your email" 
+                    className="bg-white/10 border-white/20 text-white placeholder:text-white/50 h-12 rounded-xl focus-visible:ring-primary focus-visible:border-primary"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                  />
+                  <Button type="submit" variant="secondary" className="h-12 px-6 rounded-xl font-bold whitespace-nowrap">
+                    Notify Me
+                  </Button>
+                </form>
+              )}
+            </div>
           </div>
         </div>
       </div>
