@@ -108,8 +108,8 @@ export function CTASection() {
                     />
                     <Button 
                       type="submit" 
-                      variant="secondary" 
-                      className="h-12 px-6 rounded-xl font-bold whitespace-nowrap"
+                      variant="outline" 
+                      className="h-12 px-6 rounded-xl font-bold whitespace-nowrap bg-white/20 border-white/30 text-white hover:bg-white/30"
                       disabled={isLoading}
                       data-testid="button-android-waitlist-submit"
                     >
