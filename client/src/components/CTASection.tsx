@@ -55,8 +55,10 @@ export function CTASection() {
               </a>
             </div>
             
-            <div className="mt-12 pt-8 border-t border-white/10 max-w-md mx-auto">
-              <p className="text-white/60 mb-4 font-medium">Using Android?</p>
+            <div className="mt-12 pt-8 border-t border-white/10 max-w-lg mx-auto">
+              <p className="text-white/80 mb-6 font-medium leading-relaxed">
+                Sorry we aren't available on Android yet. We are working hard to bring Loomi to Android users soon.
+              </p>
               
               {isSubmitted ? (
                 <div className="bg-white/10 rounded-xl p-4 flex items-center justify-center gap-3 text-white animate-in fade-in zoom-in duration-300">
