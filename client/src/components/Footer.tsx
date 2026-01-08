@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import logo from "@assets/loomi_4/logo.png";
-import { Mail } from "lucide-react";
+import { Mail, Facebook } from "lucide-react";
 
 export function Footer() {
   return (
@@ -15,6 +15,15 @@ export function Footer() {
             </div>
             <a href="mailto:loomi@morningpm.com" className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-2">
               <Mail className="w-4 h-4" /> Contact Support
+            </a>
+            <a 
+              href="https://www.facebook.com/people/Loomi-Stories/61585000447556/#" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"
+              data-testid="link-facebook"
+            >
+              <Facebook className="w-4 h-4" /> Facebook
             </a>
           </div>
 
