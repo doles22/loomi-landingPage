@@ -12,8 +12,8 @@ export default function Home() {
     <Layout>
       <div className="relative">
         <ThreadDecoration />
-        <Hero />
         <Features />
+        <Hero />
         <section className="py-24 bg-secondary/30 relative z-10">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-heading font-bold mb-12">Designed to feel calm</h2>
