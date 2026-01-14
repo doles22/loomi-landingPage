@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Check, AlertCircle } from "lucide-react";
+import logo from "@assets/loomi_4/logo.png";
 
 export default function ResetPassword() {
   const searchString = useSearch();
@@ -70,6 +71,9 @@ export default function ResetPassword() {
     <div className="min-h-screen bg-background flex items-center justify-center px-4">
       <div className="w-full max-w-md">
         <div className="bg-white rounded-2xl shadow-xl border border-border/50 p-8">
+          <div className="flex justify-center mb-6">
+            <img src={logo} alt="Loomi Stories" className="h-10 w-auto" />
+          </div>
           <h1 className="text-2xl font-heading font-bold text-foreground text-center mb-6">
             Reset Password
           </h1>
